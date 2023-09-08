@@ -36,5 +36,6 @@ export const useNotes = () => {
     };
     dispatch(action);
   };
+
   return { notes, notesTotal, handleAdd, handleUpdate, handleDelete };
 };
