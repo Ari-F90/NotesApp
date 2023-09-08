@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { Note } from "../models/note";
-const initialState: Note[] = [];
 
-export const noteReducer = (initialState, action) => {
+export const noteReducer = (initialState: Note[], action) => {
   switch (action.type) {
     case "add":
       return [...initialState, action.payload];
