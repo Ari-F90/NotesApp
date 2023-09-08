@@ -3,6 +3,7 @@ import { useReducer } from "react";
 import { Note } from "../models/note";
 import { noteReducer } from "../reducer/notes.reducer";
 
+export type useNotesStructure = ReturnType<typeof useNotes>;
 const initialState: Note[] = [];
 
 export const useNotes = () => {
