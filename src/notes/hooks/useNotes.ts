@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useReducer } from "react";
 import { Note } from "../models/note";
-import { noteReducer } from "../reducer/notes.reducer";
+import { initialState, noteReducer } from "../reducer/notes.reducer";
 
-export type useNotesStructure = ReturnType<typeof useNotes>;
-const initialState: Note[] = [];
+export type UseNotesStructure = ReturnType<typeof useNotes>;
 
 export const useNotes = () => {
   const [notes, dispatch] = useReducer(noteReducer, initialState);
@@ -38,5 +37,12 @@ export const useNotes = () => {
     dispatch(action);
   };
 
-  return { notes, notesTotal, handleAdd, handleUpdate, handleDelete };
+  return {
+    notes,
+    notesTotal,
+    notesPending,
+    handleAdd,
+    handleUpdate,
+    handleDelete,
+  };
 };

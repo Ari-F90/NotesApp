@@ -2,6 +2,21 @@
 
 import { Note } from "../models/note";
 
+export const initialState: Note[] = [
+  {
+    id: new Date().getMilliseconds(),
+    title: "Travel to Singapur",
+    category: "Travelling",
+    status: false,
+  },
+  {
+    id: new Date().getTime(),
+    title: "Buy a new desktop",
+    category: "Shopping",
+    status: true,
+  },
+];
+
 export const noteReducer = (initialState: Note[], action) => {
   switch (action.type) {
     case "add":
