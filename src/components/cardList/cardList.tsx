@@ -6,10 +6,6 @@ import { Card } from "../card/card";
 export const CardList = () => {
   const { notes } = useContext(NotesContext);
 
-  // useEffect(() => {
-  //   notes;
-  // }, [notes]);
-
   return (
     <ul>
       {notes.map((item: Note) => (
