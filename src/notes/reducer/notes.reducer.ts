@@ -24,7 +24,7 @@ export const noteReducer = (initialState: Note[], action) => {
     case "update":
       return initialState.map((note) => {
         if (note.id === action.payload) {
-          return { ...note, status: false };
+          return { ...note, status: !note.status };
         }
         return note;
       });
